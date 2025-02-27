@@ -1,10 +1,11 @@
-﻿@using TuProyecto.Models
-@model CalculoModel
+﻿@model TuProyecto.Models.CalculoModel
 
 <h2>Resultados</h2>
 
-<p><strong>Tiempo ingresado:</strong> @Model.Tiempo segundos</p>
-<p><strong>Distancia de caída:</strong> @Model.Resultado metros</p>
+<p><strong>Nombre del objeto:</strong> @Model.Dato</p>
+<p><strong>Altura inicial:</strong> @Model.Altura m</p>
+<p><strong>Tiempo de caída:</strong> @Model.Segundos s</p>
+<p><strong>Altura final:</strong> @Model.AlturaFinal m</p>
 <p><strong>Número aleatorio generado:</strong> @Model.NumeroAleatorio</p>
 
-<a href="@Url.Action("Index", "Calculo")">Volver</a>
+<a href="@Url.Action("Index", "Calculo")" class="btn btn-primary">Volver</a>

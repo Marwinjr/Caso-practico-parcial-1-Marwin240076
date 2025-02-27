@@ -11,9 +11,8 @@ namespace TuProyecto.Controllers
         }
 
         [HttpPost]
-        public IActionResult Calcular(double tiempo)
+        public IActionResult Calcular(CalculoModel modelo)
         {
-            var modelo = new CalculoModel { Tiempo = tiempo };
             modelo.CalcularCaida();
             modelo.GenerarNumeroAleatorio();
             return View("Resultado", modelo);

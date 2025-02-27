@@ -1,10 +1,22 @@
-﻿@using TuProyecto.Models
-@model CalculoModel
+﻿@model TuProyecto.Models.CalculoModel
 
 <h2>Calculadora de Caída Libre</h2>
 
-<form method="post" asp-action="Calcular">
-    <label for="tiempo">Ingrese el tiempo en segundos:</label>
-    <input type="number" step="0.01" name="tiempo" required />
-    <button type="submit">Calcular</button>
+<form asp-controller="Calculo" asp-action="Calcular" method="post">
+    <div class="form-group">
+        <label for="Dato">Nombre del objeto:</label>
+        <input type="text" id="Dato" name="Dato" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Altura">Altura inicial (m):</label>
+        <input type="number" id="Altura" name="Altura" step="0.01" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Segundos">Tiempo de caída (s):</label>
+        <input type="number" id="Segundos" name="Segundos" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Calcular</button>
 </form>
